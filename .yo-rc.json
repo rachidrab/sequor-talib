@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.pfe.sequortalib",
+      "nativeLanguage": "fr"
+    },
+    "jhipsterVersion": "6.8.0",
+    "applicationType": "monolith",
+    "baseName": "sequorTalib",
+    "packageName": "com.pfe.sequortalib",
+    "packageFolder": "com/pfe/sequortalib",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": "kafka",
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "Y2Y2Yjg3Mjg0NmNjZmM1NGI4NTk4NWEyNjJlMzA2NDE5MjNhMmE3ZjE4MWI5ZmJlZDZjMDI4Y2E2YWYwMzI1YmEzYjg0NGVmNTMzODljYTk3YzVlYzNlYmIzMzA5OTQzNTViMTI4Yzc2MDkwODUwZTY0ZTY0M2FmYWQ5NmQ0OWE=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "yeti",
+    "clientThemeVariant": "primary",
+    "creationTimestamp": 1589145087157,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "fr",
+    "languages": ["fr", "ar-ly", "zh-cn", "en", "es"],
+    "blueprints": []
+  }
+}
