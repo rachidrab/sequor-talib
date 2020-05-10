@@ -1,0 +1,90 @@
+entity Module {
+	nom String,
+    semestre Long
+}
+
+entity Filiere {
+	nom String
+}
+
+entity Departement {
+	nom String
+}
+
+entity HistoriqueEnseignantModule {
+	dateDebut Date,
+    dateFin Date
+}
+
+entity HistoriqueEtudiantModule {
+	dateDebut Date,
+    dateFin Date
+}
+
+entity HistoriqueEtudiantFiliere {
+	dateDebut Date,
+    dateFin Date
+}
+
+
+entity HistoriqueEnseignantFiliere {
+	dateDebut Date,
+    dateFin Date
+}
+
+
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	HistoriqueEtudiantModule to Module{nom},
+	/**
+	* A relationship
+	*/
+	HistoriqueEnseignantModule to Module{nom},
+	/**
+	* A relationship
+	*/
+	HistoriqueEtudiantFiliere to Filiere{nom},
+    /**
+	* A relationship
+	*/
+    HistoriqueEnseignantFiliere to Filiere{nom},
+    /**
+	* A relationship
+	*/
+    Departement to Filiere{nom}
+}
+
+relationship ManyToOne {
+	Module to HistoriqueEtudiantModule{dateDebut},
+	/**
+	* A relationship
+	*/
+	Module to HistoriqueEnseignantModule{dateDebut},
+	/**
+	* A relationship
+	*/
+	Filiere to HistoriqueEtudiantFiliere{dateDebut},
+    /**
+	* A relationship
+	*/
+    Filiere to HistoriqueEnseignantFiliere{dateDebut},
+    /**
+	* A relationship
+	*/
+    Filiere to Departement{nom}
+}
+
+relationship ManyToMany {
+	Filiere to Module{nom}
+    
+}
+
+
+// Set pagination options
+paginate Module, Filiere, Departement with pagination
+
+// Use Data Transfert Objects (DTO)
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
